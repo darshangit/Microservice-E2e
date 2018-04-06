@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: backend-service
+  cloud:
+    consul:
+      discovery:
+        instanceId: backend-service
+
+server:
+  port: 8090
+

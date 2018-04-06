@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: api-service
+  cloud:
+    consul:
+      discovery:
+        instanceId: api-service
+
+server:
+  port: 8091
+
+zuul:
+  routes:
+    backend-service:
+      path: /backend/**
