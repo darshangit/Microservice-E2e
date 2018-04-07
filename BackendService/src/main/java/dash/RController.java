@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class RController {
 
+    String a = null;
     @RequestMapping(value= "/get/backend")
     public String available() {
+
+        a.equals("s");
+
         return "Got Backend Value";
     }
 }
