@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: anothserservice
+  cloud:
+    consul:
+      discovery:
+        instanceId: anothserservice
+
+server:
+  port: 8092
+
+management:
+  security:
+    enabled: false
+

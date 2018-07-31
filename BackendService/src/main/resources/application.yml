@@ -5,7 +5,11 @@ spring:
     consul:
       discovery:
         instanceId: backend-service
+        name: bbc
 
 server:
   port: 8090
 
+management:
+  security:
+    enabled: false
