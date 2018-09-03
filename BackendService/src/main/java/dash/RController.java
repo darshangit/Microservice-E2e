@@ -46,12 +46,12 @@ public class RController {
 
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<SearchRequest> request = new HttpEntity<>(searchRequest);
-        ResponseEntity<SearchResponse> response = restTemplate
-                .exchange("http://anothserservice/counterparties/response", HttpMethod.POST, request, SearchResponse.class);
+//        ResponseEntity<SearchResponse> response = restTemplate
+//                .exchange("http://anothserservice/counterparties/response", HttpMethod.POST, request, SearchResponse.class);
 
 //        ResponseEntity response = restTemplate.postForEntity("http://backend-service2/counterparties/response", searchRequest,
 //                SearchResponse.class);
-        System.out.println("response" + response);
+//        System.out.println("response" + response);
         return "Got Backend Value";
     }
 }
