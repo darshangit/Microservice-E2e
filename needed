@@ -1,1 +1,17 @@
 {bcrypt}$2a$10$EOs8VROb14e7ZnydvXECA.4LoIhPOoFHKvVF/iBZ/ker17Eocz4Vi
+
+CREATE TABLE public.post_user
+(
+    id integer NOT NULL,
+    username character varying(24) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    enabled bit(1) NOT NULL,
+    account_expired bit(1) NOT NULL,
+    credentials_expired bit(1) NOT NULL,
+    account_locked bit(1) NOT NULL,
+    created_on timestamp without time zone NOT NULL DEFAULT now(),
+    updated_on timestamp without time zone NOT NULL DEFAULT now(),
+    version integer NOT NULL DEFAULT 0,
+    CONSTRAINT post_user_pkey PRIMARY KEY (id)
+)
